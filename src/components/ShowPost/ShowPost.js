@@ -11,54 +11,50 @@ import './ShowPost.css'
 import { Link } from 'react-router-dom';
 
 const ShowPost = (props) => {
-    const {userId,id,title,body} = props.post;
+  const { userId, id, title, body } = props.post;
 
-    
-    const useStyles = makeStyles({
-        root: {
-          backgroundColor:'#C0C0C0',
-          height:'300px',
-          margin:'20px 10px',
-          boxShadow: '5px 5px 10px grey',
-          textAlign:'justify',
-          
-        },
-        title: {
-          fontSize: 14,
-          color:'#3F51B5',
-          textAlign:'center',
-          margin:'10px 0px'
-        },
-        pos: {
-          marginBottom: 10,
-        },
-      });
-    const classes = useStyles();
-    return (
-      <Container>
-      <Grid xs={12} className='post_content'>
-          <Card className={classes.root}>
-              <CardContent>
-                <Typography className={classes.title} gutterBottom>
-                  <h4>{title}</h4>
-                </Typography>
-                <Typography variant="h5" component="h2">
-                  <p>{body}</p>
-                </Typography>
-                <Typography className={classes.pos} color="textSecondary">
-                  <span>User Id :{userId}</span>
-              </Typography>
-              </CardContent>
-              <CardActions>
-                <Link className='post-btn' to ={`/post/${id}`}>
-                      <Button variant="contained" color="primary" > READ MORE</Button>
-                </Link>
-                
-              </CardActions>
-          </Card>
-        
-        </Grid>
-      </Container>
-    )};
+  const useStyles = makeStyles({
+    root: {
+      backgroundColor: 'silver',
+      height: '320px',
+      margin: '10px 5px',
+      boxShadow: '5px 5px 10px grey',
+      textAlign: 'center',
+      fontSize: '15px'
+    },
+    title: {
+      fontSize: 15,
+      color: 'black',
+      textAlign: 'center',
+      margin: '10px 0px'
+    },
+    pos: {
+      marginBottom: 10,
+    },
+  });
+  const classes = useStyles();
+  return (
+    <Container>
+      <Grid xs={3} className='post_content'>
+        <Card className={classes.root}>
+          <CardContent>
+            <Typography className={classes.title} gutterBottom>
+              <h4>{title}</h4>
+            </Typography>
+            <Typography variant="" component="">
+              <p>{body}</p>
+            </Typography>
+          </CardContent>
+          <CardActions>
+            <Link className='post-btn' to={`/post/${id}`}>
+              <Button variant="contained" color="primary" > READ MORE</Button>
+            </Link>
+
+          </CardActions>
+        </Card>
+      </Grid>
+    </Container>
+  )
+};
 
 export default ShowPost;
