@@ -1,0 +1,19 @@
+/* .post-wrapper{
+    margin:auto;
+} */
+.comment-content{
+    background-color: silver;
+    box-shadow: 5px 5px 10px gray;
+    padding: 20px;
+    border-radius: 20px;
+    margin-top: 20px;
+    width: 1020px;
+    text-align:center;
+}
+
+.comment-content img{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    
+}
