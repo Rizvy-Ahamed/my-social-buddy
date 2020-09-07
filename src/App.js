@@ -24,12 +24,6 @@ function App() {
           <Route path='/home'>
             <Home></Home>
           </Route>
-          <Route path='/profile'>
-            <MyProfile></MyProfile>
-          </Route>
-          <Route path='/portfolio'>
-            <MyPortfolio></MyPortfolio>
-          </Route>
           <Route path='/post/:ShowDetails'>
             <PostDetails></PostDetails>
           </Route>
